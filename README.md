@@ -1,1 +1,4 @@
-# s26-geography-of-rights
+# The Geography of Rights: A State-Level Human Rights Policy Index Project Plan
+This project scores all 50 U.S. states on their protection of human rights across five policy areas: reproductive rights, LGBTQ+ protections, voting access, labor rights, and criminal justice reform. We aggregate data from multiple public policy trackers to build a composite Human Rights Policy Index, then use statistics to identify what drives those scores. The end product is an interactive dashboard, a written report, and a presentation for the DSS quarterly showcase.
+
+For this project, Team members contribute by collecting and scoring state-level indicators within specific policy areas. Final deliverables include a Jupyter notebook with full analysis, a single-page interactive dashboard, and a written report.
