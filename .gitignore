@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+
+# Claude Code
+.claude/
+
+# Raw USSC data zips (large; download from https://www.ussc.gov/research/datafiles/commission-datafiles)
+data/raw/*.zip
+data/raw/*.dat
+data/raw/*.sas
+data/raw/*.sps
+data/raw/_extracted/
+data/raw/s26-geography-of-rights/
+
+# Large processed CSV (keep parquet)
+data/processed/*.csv
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/

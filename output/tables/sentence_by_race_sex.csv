@@ -1,0 +1,9 @@
+RACE,SEX,Mean,Median,Std Dev,N
+Black,Female,35.22,21.0,48.5,4901
+Black,Male,78.01,60.0,78.7,61166
+Hispanic,Female,27.67,13.03,40.22,14399
+Hispanic,Male,34.13,14.0,55.34,135213
+Other,Female,40.68,24.0,54.22,2006
+Other,Male,65.94,36.0,87.92,9415
+White,Female,52.2,33.0,61.72,10362
+White,Male,84.91,60.0,106.31,47361

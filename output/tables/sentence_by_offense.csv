@@ -1,0 +1,31 @@
+OFFENSE_CAT,Mean,Median,Std Dev,N
+Administration of Justice,17.41,12.03,22.57,2201
+Antitrust,8.55,6.0,9.85,20
+Arson,62.43,60.0,57.45,405
+Assault,73.74,46.0,81.93,3540
+Bribery/Corruption,24.3,18.0,25.11,1154
+Burglary/Trespass,23.59,18.0,28.17,306
+Child Pornography,113.24,96.0,90.4,6388
+Commercialized Vice,26.24,18.0,33.75,283
+Drug Trafficking,4.55,1.97,9.84,552
+Environmental,80.71,61.0,68.25,87966
+Extortion/Racketeering,8.45,5.0,10.95,211
+Firearms,45.45,28.0,64.07,460
+Food & Drug,51.83,41.0,43.06,39351
+Forgery/Counterfeiting,23.48,18.0,20.06,87
+Fraud,19.82,17.81,16.9,520
+Immigration,27.66,19.0,33.54,18591
+Individual Rights,11.6,7.36,13.41,93363
+Kidnapping,68.57,36.0,88.75,331
+Larceny,195.02,156.0,139.48,572
+Manslaughter,77.79,63.0,59.27,357
+Money Laundering,66.68,40.0,86.16,5000
+Murder,272.75,240.0,162.46,1958
+National Defense,41.4,30.0,55.1,858
+Obscenity/Prostitution,22.09,18.0,20.33,1539
+Other,10.5,6.0,23.57,1081
+Prison Offenses,12.65,10.0,12.81,2254
+Robbery,109.51,96.0,89.25,6783
+Sex Offenses,227.26,180.0,206.22,6217
+Stalking/Harassment,31.33,24.0,34.91,1078
+Tax,21.02,15.0,24.48,1397

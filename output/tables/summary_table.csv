@@ -1,0 +1,9 @@
+,Race,Sex,N,Mean Sentence (mo),Median Sentence (mo),Std Dev,% Incarcerated
+0,Black,Female,4901,35.2,21.0,48.5,80.3
+1,Black,Male,61166,78.0,60.0,78.7,95.3
+2,Hispanic,Female,14399,27.7,13.0,40.2,86.6
+3,Hispanic,Male,135213,34.1,14.0,55.3,91.8
+4,Other,Female,2006,40.7,24.0,54.2,83.3
+5,Other,Male,9415,65.9,36.0,87.9,91.4
+6,White,Female,10362,52.2,33.0,61.7,86.8
+7,White,Male,47361,84.9,60.0,106.3,93.6

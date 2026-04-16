@@ -1,0 +1,6 @@
+test,F-statistic,p-value,significant_at_05,H-statistic,chi2,dof
+One-way ANOVA (sentence ~ race),8117.6906,0.0,True,,,
+Kruskal-Wallis (sentence ~ race),,0.0,True,42619.8883,,
+Chi-square (incarceration ~ race),,3.947485273467168e-133,True,,615.7159,3.0
+Chi-square (incarceration ~ sex),,0.0,True,,2190.4979,1.0
+Chi-square (incarceration ~ race x sex),,0.0,True,,3216.9639,7.0
