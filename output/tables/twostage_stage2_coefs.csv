@@ -1,0 +1,15 @@
+Model,Variable,Coef,SE,t,p-value,CI_low,CI_high,Sig
+Stage 2 (Conditional OLS),RACE_BLACK,0.0765,0.0037,20.448,0.0,0.0692,0.0838,***
+Stage 2 (Conditional OLS),RACE_HISPANIC,-0.0014,0.0041,-0.349,0.7273,-0.0095,0.0066,
+Stage 2 (Conditional OLS),RACE_OTHER,0.0163,0.0078,2.088,0.0368,0.001,0.0316,*
+Stage 2 (Conditional OLS),FEMALE,-0.2469,0.007,-35.33,0.0,-0.2606,-0.2332,***
+Stage 2 (Conditional OLS),RACE_BLACK:FEMALE,-0.1011,0.013,-7.768,0.0,-0.1267,-0.0756,***
+Stage 2 (Conditional OLS),RACE_HISPANIC:FEMALE,-0.0101,0.0102,-0.99,0.322,-0.03,0.0099,
+Stage 2 (Conditional OLS),RACE_OTHER:FEMALE,0.0226,0.0199,1.138,0.2549,-0.0163,0.0615,
+Stage 2 (Conditional OLS),AGE,-0.0034,0.0001,-26.02,0.0,-0.0037,-0.0032,***
+Stage 2 (Conditional OLS),XFOLSOR,0.0922,0.0002,476.998,0.0,0.0919,0.0926,***
+Stage 2 (Conditional OLS),XCRHISSR,0.1423,0.0008,188.098,0.0,0.1408,0.1437,***
+Stage 2 (Conditional OLS),XMINSOR,0.0,0.0,7.67,0.0,0.0,0.0,***
+Stage 2 (Conditional OLS),MAND_MIN,-0.0151,0.019,-0.795,0.4267,-0.0525,0.0222,
+Stage 2 (Conditional OLS),GUILTY_PLEA,-0.1492,0.0103,-14.441,0.0,-0.1694,-0.1289,***
+Stage 2 (Conditional OLS),ACCEPT_RESP,-0.0644,0.0085,-7.597,0.0,-0.0811,-0.0478,***
