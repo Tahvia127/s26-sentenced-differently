@@ -1,0 +1,15 @@
+Model,Variable,Coef,SE,t,p-value,CI_low,CI_high,Sig
+Drug Trafficking,RACE_BLACK,0.2491,0.0163,15.3,0.0,0.2172,0.281,***
+Drug Trafficking,RACE_HISPANIC,0.2687,0.0174,15.428,0.0,0.2346,0.3029,***
+Drug Trafficking,RACE_OTHER,0.0068,0.0432,0.157,0.8753,-0.0779,0.0914,
+Drug Trafficking,FEMALE,-0.538,0.0282,-19.07,0.0,-0.5933,-0.4827,***
+Drug Trafficking,RACE_BLACK:FEMALE,-0.5402,0.0626,-8.629,0.0,-0.6629,-0.4175,***
+Drug Trafficking,RACE_HISPANIC:FEMALE,-0.0682,0.0376,-1.814,0.0696,-0.1419,0.0055,.
+Drug Trafficking,RACE_OTHER:FEMALE,-0.0309,0.0906,-0.341,0.7332,-0.2084,0.1466,
+Drug Trafficking,AGE,-0.0079,0.0006,-14.071,0.0,-0.009,-0.0068,***
+Drug Trafficking,XFOLSOR,0.114,0.0009,120.698,0.0,0.1122,0.1159,***
+Drug Trafficking,XCRHISSR,0.2155,0.003,71.516,0.0,0.2096,0.2214,***
+Drug Trafficking,XMINSOR,-0.0,0.0,-8.756,0.0,-0.0001,-0.0,***
+Drug Trafficking,MAND_MIN,0.0875,0.1353,0.647,0.5179,-0.1777,0.3527,
+Drug Trafficking,GUILTY_PLEA,-0.2052,0.041,-5.002,0.0,-0.2855,-0.1248,***
+Drug Trafficking,ACCEPT_RESP,-0.1763,0.0324,-5.438,0.0,-0.2399,-0.1128,***

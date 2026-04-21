@@ -29,12 +29,24 @@ PROCESSED_DIR = Path("data/processed")
 
 # Variables we need for the analysis (keeps memory manageable)
 KEEP_VARS = [
-    "USSCIDN", "AGE", "AGECAT", "MONSEX", "NEWRACE", "MONRACE",
+    # Identifiers
+    "USSCIDN",
+    # Demographics
+    "AGE", "AGECAT", "MONSEX", "NEWRACE", "MONRACE",
     "HISPORIG", "EDUCATN", "NEWEDUC", "NEWCIT",
+    # Offense / guidelines
     "OFFGUIDE", "XFOLSOR", "XCRHISSR", "XMINSOR", "XMAXSOR",
+    # Sentence outcome
     "SENTTOT", "SENSPLT0", "SENTMON", "SENTRNGE",
     "INOUT", "ZONE",
-    "CRIMHIST", "DISTRICT", "CIRCDIST",
+    # Plea / acceptance of responsibility
+    "ACCAP",    # acceptance of responsibility (0=none, 1=partial, 2=full, 3=N/A)
+    "ACCTRESP", # acceptance points adjustment
+    "DSPLEA",   # disposition/plea type (1=guilty plea, 2=nolo, 3=trial, 4=other)
+    "DISPOSIT", # case disposition
+    # Geography / jurisdiction
+    "DISTRICT", "CIRCDIST",
+    # Offense count
     "NOCOUNTS",
 ]
 
@@ -178,6 +190,8 @@ NUMERIC_COLS = [
     "SENTTOT", "SENSPLT0", "SENTMON", "SENTRNGE",
     "INOUT", "ZONE", "CRIMHIST",
     "DISTRICT", "CIRCDIST", "NOCOUNTS",
+    # Plea / acceptance of responsibility
+    "ACCAP", "ACCTRESP", "DSPLEA", "DISPOSIT",
 ]
 
 
