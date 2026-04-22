@@ -11,6 +11,7 @@ import PixelAvatar, {
   GRID_W, GRID_H, SCALE,
   exportAvatarToCanvas,
 } from './PixelAvatar';
+import AIAvatarPanel from './AIAvatarPanel';
 import AvatarCustomizer from './AvatarCustomizer';
 import AccessoryPicker from './AccessoryPicker';
 import { calculateSentence } from '../utils/calculateSentence';
@@ -240,10 +241,9 @@ export default function InmateCreator({ onProceed }) {
             {caseNumber}
           </div>
 
-          {/* Avatar with export target id */}
-          <div id="avatar-export-target" ref={avatarRef}
-            style={{ imageRendering:'pixelated', position:'relative' }}>
-            <PixelAvatar
+          {/* Avatar — pixel art + optional AI generation */}
+          <div id="avatar-export-target" ref={avatarRef} style={{ position:'relative' }}>
+            <AIAvatarPanel
               profile={profile}
               appearance={appearance}
               outfit={outfit}
