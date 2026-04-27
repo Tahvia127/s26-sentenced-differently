@@ -1,113 +1,86 @@
 /**
- * NavBar.jsx
- * Persistent top navigation for all site pages.
+ * NavBar.jsx — Persistent navigation in new light-theme design.
  */
 
 import React, { useState } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const LINKS = [
   { to: '/',            label: 'Home' },
   { to: '/about',       label: 'About the Data' },
-  { to: '/simulator',   label: 'Simulator' },
+  { to: '/simulator',   label: '▶ Simulator' },
   { to: '/methodology', label: 'Methodology' },
   { to: '/team',        label: 'Team' },
   { to: '/sources',     label: 'Sources' },
 ];
 
-export default function NavBar() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const location = useLocation();
+const NAV_STYLE = {
+  position: 'sticky',
+  top: 0,
+  zIndex: 100,
+  background: '#F5F2EB',
+  borderBottom: '1px solid #333',
+};
 
-  const isSimulator = location.pathname === '/simulator';
+export default function NavBar() {
+  const [open, setOpen] = useState(false);
 
   return (
-    <header style={{
-      position: 'sticky', top: 0, zIndex: 100,
-      background: '#080810',
-      borderBottom: '1px solid #1E1E2E',
-      padding: '0 16px',
-    }}>
-      <div style={{
-        maxWidth: 1440, margin: '0 auto',
-        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-        height: 52,
-      }}>
+    <nav style={NAV_STYLE}>
+      <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 44 }}>
 
-        {/* Wordmark */}
-        <NavLink to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 10 }}>
-          <span style={{ color: '#E8621A', fontFamily: 'monospace', fontSize: 18, fontWeight: 900 }}>■</span>
-          <div>
-            <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#E0E0F0', fontFamily: 'monospace' }}>
-              Sentenced Differently
-            </div>
-            <div style={{ fontSize: 8, color: '#333350', letterSpacing: '0.15em', textTransform: 'uppercase', marginTop: 1 }}>
-              USSC FY2020–2024 · N=284,823
-            </div>
-          </div>
-        </NavLink>
-
-        {/* Desktop nav */}
-        <nav style={{ display: 'flex', gap: 2, alignItems: 'center' }}
-          className="desktop-nav">
+        <div style={{ display: 'flex', gap: 1 }} className="desktop-nav">
           {LINKS.map(({ to, label }) => (
-            <NavLink key={to} to={to}
-              end={to === '/'}
+            <NavLink key={to} to={to} end={to === '/'}
               style={({ isActive }) => ({
+                display: 'block',
+                padding: '0 14px',
+                lineHeight: '42px',
+                fontFamily: "'Space Mono', monospace",
                 fontSize: 10,
-                padding: '5px 12px',
-                borderRadius: 5,
-                textDecoration: 'none',
-                fontFamily: 'monospace',
-                letterSpacing: '0.1em',
+                letterSpacing: '0.12em',
                 textTransform: 'uppercase',
-                fontWeight: isActive ? 700 : 400,
-                color: isActive ? '#E8621A' : '#888899',
-                background: isActive ? 'rgba(232,98,26,0.1)' : 'transparent',
-                border: `1px solid ${isActive ? 'rgba(232,98,26,0.3)' : 'transparent'}`,
-                transition: 'all 0.15s',
+                textDecoration: 'none',
+                color: isActive ? '#fff' : '#1A1A1A',
+                background: isActive ? '#E8621A' : 'transparent',
+                borderRight: '1px solid transparent',
+                borderLeft: '1px solid transparent',
+                boxShadow: isActive ? '2px 2px 0 #333' : 'none',
+                position: 'relative',
+                zIndex: isActive ? 1 : 0,
               })}
             >
-              {label === 'Simulator' ? '▶ Simulator' : label}
+              {label}
             </NavLink>
           ))}
-        </nav>
+        </div>
 
-        {/* Hamburger (mobile) */}
+        {/* Hamburger */}
         <button
-          onClick={() => setMenuOpen(o => !o)}
-          style={{
-            display: 'none', background: 'none', border: 'none',
-            color: '#888899', fontSize: 20, cursor: 'pointer',
-            padding: 4,
-          }}
+          onClick={() => setOpen(o => !o)}
           className="hamburger"
+          style={{ display: 'none', background: 'none', border: '1px solid #333', padding: '4px 8px', cursor: 'pointer', fontFamily: 'monospace', fontSize: 14 }}
           aria-label="Toggle menu"
         >
-          {menuOpen ? '✕' : '☰'}
+          {open ? '✕' : '☰'}
         </button>
       </div>
 
-      {/* Mobile dropdown */}
-      {menuOpen && (
-        <div style={{
-          borderTop: '1px solid #1E1E2E',
-          background: '#080810',
-          padding: '8px 16px 12px',
-        }}>
+      {open && (
+        <div style={{ background: '#F5F2EB', borderTop: '1px solid #333', padding: '8px 24px 12px' }}>
           {LINKS.map(({ to, label }) => (
             <NavLink key={to} to={to} end={to === '/'}
-              onClick={() => setMenuOpen(false)}
+              onClick={() => setOpen(false)}
               style={({ isActive }) => ({
                 display: 'block',
+                fontFamily: "'Space Mono', monospace",
                 fontSize: 11,
-                padding: '8px 0',
-                textDecoration: 'none',
-                fontFamily: 'monospace',
                 letterSpacing: '0.1em',
                 textTransform: 'uppercase',
-                color: isActive ? '#E8621A' : '#888899',
-                borderBottom: '1px solid #1A1A2A',
+                textDecoration: 'none',
+                color: isActive ? '#E8621A' : '#1A1A1A',
+                padding: '10px 0',
+                borderBottom: '1px solid #ddd',
               })}
             >
               {label}
@@ -119,9 +92,9 @@ export default function NavBar() {
       <style>{`
         @media (max-width: 700px) {
           .desktop-nav { display: none !important; }
-          .hamburger { display: block !important; }
+          .hamburger   { display: block !important; }
         }
       `}</style>
-    </header>
+    </nav>
   );
 }

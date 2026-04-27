@@ -27,7 +27,7 @@ function HairPreview({ styleId, selected, hairHex }) {
 
 function Label({ children }) {
   return (
-    <p style={{ fontSize:9, letterSpacing:'0.2em', textTransform:'uppercase', color:'#444460', marginBottom:6 }}>
+    <p style={{ fontSize:9, letterSpacing:'0.2em', textTransform:'uppercase', color:'#555', marginBottom:6 }}>
       {children}
     </p>
   );
@@ -40,7 +40,7 @@ export default function AvatarCustomizer({ appearance, onChange, sex }) {
 
   return (
     <div style={{ fontSize:11, color:'#AAAACC' }}>
-      <p style={{ fontSize:9, color:'#444460', fontStyle:'italic', textAlign:'center', marginBottom:8 }}>
+      <p style={{ fontSize:9, color:'#555', fontStyle:'italic', textAlign:'center', marginBottom:8 }}>
         Appearance is yours to set — race gives a starting point only
       </p>
 
@@ -53,7 +53,7 @@ export default function AvatarCustomizer({ appearance, onChange, sex }) {
               aria-label={`Skin tone: ${t.label}`}
               title={t.label}
               onClick={() => set('skinTone', t.id)}
-              style={{ width:22, height:22, borderRadius:'50%', background:t.hex, border:`2px solid ${appearance.skinTone===t.id?'#E8621A':'#2A2A3F'}`, cursor:'pointer', outline:'none' }}
+              style={{ width:22, height:22, borderRadius:'50%', background:t.hex, border:`2px solid ${appearance.skinTone===t.id?'#E8621A':'#ddd'}`, cursor:'pointer', outline:'none' }}
             />
           ))}
         </div>
@@ -71,7 +71,7 @@ export default function AvatarCustomizer({ appearance, onChange, sex }) {
                 aria-label={`Hair style: ${style.label}`}
                 title={style.label}
                 onClick={() => set('hairStyle', style.id)}
-                style={{ border:`2px solid ${appearance.hairStyle===style.id?'#E8621A':'#2A2A3F'}`, background:'#0E0E1A', padding:2, borderRadius:4, cursor:'pointer', outline:'none' }}
+                style={{ border:`2px solid ${appearance.hairStyle===style.id?'#E8621A':'#ddd'}`, background:'#F5F2EB', padding:2, borderRadius:4, cursor:'pointer', outline:'none' }}
               >
                 <HairPreview styleId={style.id} selected={appearance.hairStyle===style.id} hairHex={currentHairHex} />
               </button>
@@ -85,7 +85,7 @@ export default function AvatarCustomizer({ appearance, onChange, sex }) {
                 aria-label={`Hair style: ${style.label}`}
                 title={style.label}
                 onClick={() => set('hairStyle', style.id)}
-                style={{ border:`2px solid ${appearance.hairStyle===style.id?'#E8621A':'#2A2A3F'}`, background:'#0E0E1A', padding:2, borderRadius:4, cursor:'pointer', outline:'none' }}
+                style={{ border:`2px solid ${appearance.hairStyle===style.id?'#E8621A':'#ddd'}`, background:'#F5F2EB', padding:2, borderRadius:4, cursor:'pointer', outline:'none' }}
               >
                 <HairPreview styleId={style.id} selected={appearance.hairStyle===style.id} hairHex={currentHairHex} />
               </button>
@@ -103,7 +103,7 @@ export default function AvatarCustomizer({ appearance, onChange, sex }) {
               aria-label={`Hair color: ${c.label}`}
               title={c.label}
               onClick={() => set('hairColor', c.id)}
-              style={{ width:22, height:22, borderRadius:4, background:c.hex, border:`2px solid ${appearance.hairColor===c.id?'#E8621A':'#2A2A3F'}`, cursor:'pointer', outline:'none' }}
+              style={{ width:22, height:22, borderRadius:4, background:c.hex, border:`2px solid ${appearance.hairColor===c.id?'#E8621A':'#ddd'}`, cursor:'pointer', outline:'none' }}
             />
           ))}
         </div>
@@ -119,8 +119,8 @@ export default function AvatarCustomizer({ appearance, onChange, sex }) {
                 onClick={() => set('facialHair', f.id)}
                 style={{
                   fontSize:9, padding:'3px 6px', borderRadius:3, cursor:'pointer', outline:'none',
-                  background: appearance.facialHair===f.id ? 'rgba(232,98,26,0.15)' : '#0E0E1A',
-                  border:`1px solid ${appearance.facialHair===f.id?'#E8621A':'#2A2A3F'}`,
+                  background: appearance.facialHair===f.id ? 'rgba(232,98,26,0.15)' : '#F5F2EB',
+                  border:`1px solid ${appearance.facialHair===f.id?'#E8621A':'#ddd'}`,
                   color: appearance.facialHair===f.id ? '#E8621A' : '#888',
                 }}
               >
@@ -140,8 +140,8 @@ export default function AvatarCustomizer({ appearance, onChange, sex }) {
               onClick={() => set('build', b.id)}
               style={{
                 fontSize:9, padding:'3px 8px', borderRadius:3, cursor:'pointer', outline:'none',
-                background: appearance.build===b.id ? 'rgba(232,98,26,0.15)' : '#0E0E1A',
-                border:`1px solid ${appearance.build===b.id?'#E8621A':'#2A2A3F'}`,
+                background: appearance.build===b.id ? 'rgba(232,98,26,0.15)' : '#F5F2EB',
+                border:`1px solid ${appearance.build===b.id?'#E8621A':'#ddd'}`,
                 color: appearance.build===b.id ? '#E8621A' : '#888',
               }}
             >

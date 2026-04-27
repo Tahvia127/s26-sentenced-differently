@@ -11,8 +11,8 @@ import React, { useMemo } from 'react';
 const inputStyle = {
   background: 'transparent',
   border: 'none',
-  borderBottom: '1px solid #3A3A50',
-  color: '#D0D0E8',
+  borderBottom: '1px solid #999',
+  color: '#1A1A1A',
   fontFamily: "'Courier New', Courier, monospace",
   fontSize: 12,
   padding: '2px 4px',
@@ -21,11 +21,11 @@ const inputStyle = {
 };
 
 const fieldStyle = {
-  borderBottom: '1px solid #333350',
+  borderBottom: '1px solid #ccc',
   padding: '4px 6px',
   fontFamily: "'Courier New', Courier, monospace",
   fontSize: 11,
-  color: '#8888AA',
+  color: '#444',
   letterSpacing: '0.05em',
 };
 
@@ -33,7 +33,7 @@ function FormRow({ label, children, col = 1 }) {
   return (
     <div style={{ display: 'grid', gridTemplateColumns: col > 1 ? `repeat(${col}, 1fr)` : '1fr', gap: 8, marginBottom: 8 }}>
       <div>
-        <div style={{ fontSize: 8, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#444460', marginBottom: 2 }}>
+        <div style={{ fontSize: 8, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#555', marginBottom: 2 }}>
           {label}
         </div>
         {children}
@@ -53,7 +53,7 @@ function TwoCol({ a, b }) {
 function Field({ label, children }) {
   return (
     <div>
-      <div style={{ fontSize: 8, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#444460', marginBottom: 2 }}>
+      <div style={{ fontSize: 8, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#555', marginBottom: 2 }}>
         {label}
       </div>
       {children}
@@ -66,10 +66,10 @@ function TypeSelect({ value, onChange, options }) {
     <select
       value={value}
       onChange={e => onChange(e.target.value)}
-      style={{ ...inputStyle, borderBottom: '1px solid #3A3A50', cursor: 'pointer', width: '100%' }}
+      style={{ ...inputStyle, borderBottom: '1px solid #999', cursor: 'pointer', width: '100%' }}
     >
       {options.map(o => (
-        <option key={o.value} value={o.value} style={{ background: '#0E0E1A' }}>{o.label}</option>
+        <option key={o.value} value={o.value} style={{ background: '#fff' }}>{o.label}</option>
       ))}
     </select>
   );
@@ -88,7 +88,7 @@ function RadioRow({ name, value, onChange, options }) {
             style={{
               fontSize: 10,
               padding: '3px 8px',
-              border: `1px solid ${value === val ? '#E8621A' : '#2A2A3F'}`,
+              border: `1px solid ${value === val ? '#E8621A' : '#ddd'}`,
               background: value === val ? 'rgba(232,98,26,0.12)' : 'transparent',
               color: value === val ? '#E8621A' : '#888',
               borderRadius: 2,
@@ -108,11 +108,11 @@ function RadioRow({ name, value, onChange, options }) {
 function SectionBreak({ label }) {
   return (
     <div style={{ display: 'flex', alignItems: 'center', gap: 8, margin: '12px 0 8px' }}>
-      <div style={{ flex: 1, height: 1, background: '#2A2A3F' }} />
-      <span style={{ fontSize: 8, letterSpacing: '0.25em', textTransform: 'uppercase', color: '#333350', whiteSpace: 'nowrap' }}>
+      <div style={{ flex: 1, height: 1, background: '#ddd' }} />
+      <span style={{ fontSize: 8, letterSpacing: '0.25em', textTransform: 'uppercase', color: '#555', whiteSpace: 'nowrap' }}>
         {label}
       </span>
-      <div style={{ flex: 1, height: 1, background: '#2A2A3F' }} />
+      <div style={{ flex: 1, height: 1, background: '#ddd' }} />
     </div>
   );
 }
@@ -213,21 +213,21 @@ export default function IntakeForm({ profile, caseNumber, onChange }) {
     <div style={{ fontFamily: "'Courier New', Courier, monospace" }}>
 
       {/* ── USSC letterhead ── */}
-      <div style={{ borderBottom: '2px solid #3A3A50', paddingBottom: 10, marginBottom: 12 }}>
-        <div style={{ fontSize: 9, color: '#555570', letterSpacing: '0.25em', textTransform: 'uppercase', marginBottom: 2 }}>
+      <div style={{ borderBottom: '2px solid #999', paddingBottom: 10, marginBottom: 12 }}>
+        <div style={{ fontSize: 9, color: '#666', letterSpacing: '0.25em', textTransform: 'uppercase', marginBottom: 2 }}>
           U.S. FEDERAL INTAKE PROCESSING
         </div>
         <div style={{ fontSize: 10, color: '#6A6A88', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: 2 }}>
           Sentenced Differently — Interactive Case File
         </div>
-        <div style={{ fontSize: 8, color: '#444460', letterSpacing: '0.2em', textTransform: 'uppercase' }}>
+        <div style={{ fontSize: 8, color: '#555', letterSpacing: '0.2em', textTransform: 'uppercase' }}>
           Fiscal Year 2024 &nbsp;|&nbsp; U.S. Sentencing Commission Data
         </div>
       </div>
 
       {/* Case number */}
       <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 14, alignItems: 'baseline' }}>
-        <span style={{ fontSize: 9, color: '#444460', letterSpacing: '0.2em', textTransform: 'uppercase' }}>Case No.</span>
+        <span style={{ fontSize: 9, color: '#555', letterSpacing: '0.2em', textTransform: 'uppercase' }}>Case No.</span>
         <span style={{ fontSize: 12, color: '#E8621A', fontWeight: 700, letterSpacing: '0.1em' }}>{caseNumber}</span>
       </div>
 
@@ -244,7 +244,7 @@ export default function IntakeForm({ profile, caseNumber, onChange }) {
           onChange={e => set('age', parseInt(e.target.value))}
           style={{ width:'100%', accentColor:'#E8621A', cursor:'pointer' }}
         />
-        <div style={{ display:'flex', justifyContent:'space-between', fontSize:8, color:'#444460', marginTop:2 }}>
+        <div style={{ display:'flex', justifyContent:'space-between', fontSize:8, color:'#555', marginTop:2 }}>
           <span>18</span><span>45</span><span>65</span>
         </div>
       </FormRow>
@@ -277,7 +277,7 @@ export default function IntakeForm({ profile, caseNumber, onChange }) {
         <TypeSelect value={profile.crimHistory} onChange={v => set('crimHistory', v)} options={CRIM_HIST_OPTS} />
       </FormRow>
 
-      <label style={{ display:'flex', alignItems:'center', gap:6, fontSize:10, color:'#8888AA', cursor:'pointer', marginBottom:8 }}>
+      <label style={{ display:'flex', alignItems:'center', gap:6, fontSize:10, color:'#666', cursor:'pointer', marginBottom:8 }}>
         <input type="checkbox" checked={profile.onSupervision}
           onChange={e => set('onSupervision', e.target.checked)}
           style={{ accentColor:'#E8621A', cursor:'pointer' }}
@@ -312,7 +312,7 @@ export default function IntakeForm({ profile, caseNumber, onChange }) {
         <div style={{ display:'flex', flexDirection:'column', gap:4 }}>
           {AGG_FACTORS.map(f => (
             <label key={f.value} style={{ display:'flex', alignItems:'center', gap:6, cursor:'pointer', fontSize:10,
-              color: f.value === 'accepted_resp' ? '#44CC88' : '#8888AA' }}>
+              color: f.value === 'accepted_resp' ? '#44CC88' : '#666' }}>
               <input type="checkbox"
                 checked={(profile.aggravatingFactors||[]).includes(f.value)}
                 onChange={() => toggleFactor(f.value)}

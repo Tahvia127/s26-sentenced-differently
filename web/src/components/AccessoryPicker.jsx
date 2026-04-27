@@ -39,7 +39,7 @@ function AccItem({ item, active, onToggle }) {
           padding:'6px 4px', borderRadius:6, cursor:'pointer', outline:'none',
           width:54,
           background: active ? 'rgba(232,98,26,0.15)' : 'rgba(255,255,255,0.03)',
-          border: `1px solid ${active ? '#E8621A' : '#2A2A3F'}`,
+          border: `1px solid ${active ? '#E8621A' : '#ddd'}`,
           transition: 'all 0.12s',
         }}
       >
@@ -62,7 +62,7 @@ export default function AccessoryPicker({ active, onToggle }) {
     <div>
       {ACCESSORY_GROUPS.map(group => (
         <div key={group.label} style={{ marginBottom:12 }}>
-          <p style={{ fontSize:9, letterSpacing:'0.2em', textTransform:'uppercase', color:'#444460', marginBottom:6 }}>
+          <p style={{ fontSize:9, letterSpacing:'0.2em', textTransform:'uppercase', color:'#555', marginBottom:6 }}>
             {group.label}
           </p>
           <div style={{ display:'flex', gap:5, flexWrap:'wrap' }}>
